@@ -4,13 +4,13 @@ import { useState } from "react"
 const App = () => {
 
 
-  const [users , setusers] = useState([])
+  const [users, setusers] = useState([])
 
   const fetchkro = () => {
 
     fetch('http://localhost:4000/get')
       .then((r) => r.json())
-      .then((d) => setusers(d))
+      .then((d) => console.log(d))
 
 
   }
@@ -20,9 +20,8 @@ const App = () => {
   return (
     <div>
       <h1>
-        <button onClick={() => fetchkro()} >cllick kr bhai</button>
 
-        {users.map( (v,i) => <li key={i}>{v.name}</li> )}
+        <button onClick={() => fetchkro()} >cllick kr bhai</button>
 
       </h1>
     </div>
