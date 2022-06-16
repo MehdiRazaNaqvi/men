@@ -14,7 +14,7 @@ const App = () => {
 
   const fetchkro = () => {
 
-    fetch('http://localhost:3000/get', {
+    fetch('https://menserver.herokuapp.com/get', {
       method: "get"
     })
       .then((d) => console.log(d))
@@ -44,7 +44,7 @@ const App = () => {
 
 
 
-    fetch('http://localhost:3000/posst', {
+    fetch('https://menserver.herokuapp.com/posst', {
 
 
       method: 'post',
