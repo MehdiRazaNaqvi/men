@@ -22,7 +22,7 @@ const App = () => {
 
 
     const fetchdata = () => {
-        fetch('http://localhost:4000/get', {
+        fetch('https://menserver.herokuapp.com/get', {
             method: "get"
         })
             .then((r) => r.json())
@@ -47,7 +47,7 @@ const App = () => {
 
         // const data = { name: "mehdi", age: 22 }
 
-        fetch(' http://localhost:4000/post', {
+        fetch('https://menserver.herokuapp.com/post', {
             method: 'post',
             headers: headers,
             body: JSON.stringify(todolist)
